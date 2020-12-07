@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "236450619001",
+    "project_id": "extractor-63eb9",
+    "storage_bucket": "extractor-63eb9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236450619001:android:709834c4f4270e4d7d7ea8",
+        "android_client_info": {
+          "package_name": "com.extractor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "236450619001-o3ejbg425kg7b5aqquelqu4sfcl866t5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDctDOobKFccA2ELwb_zROuSL5UBmcaUFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "236450619001-o3ejbg425kg7b5aqquelqu4sfcl866t5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
