@@ -1,5 +1,7 @@
 import React from 'react';
 import Camera, {Constants} from './src/components/camera';
+import Selector from './src/components/selector';
+import Helper from './src/lib/helper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {SafeAreaView, StyleSheet, TouchableOpacity} from 'react-native';
 
@@ -7,12 +9,20 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {showCamera: false, recogonizedText: null};
+    this.state = {
+      showCamera: false,
+      showWordList: false,
+      recogonizedText: null,
+    };
   }
 
   onOCRCapture(recogonizedText) {
     console.log('onCapture', recogonizedText);
-    this.setState({showCamera: false, recogonizedText: recogonizedText});
+    this.setState({
+      showCamera: false,
+      showWordList: Helper.isNotNullAndUndefined,
+      recogonizedText: recogonizedText,
+    });
   }
 
   render() {
@@ -44,6 +54,9 @@ class Search extends React.Component {
               this.setState({showCamera: false});
             }}
           />
+        )}
+        {this.state.showWordList && (
+          <Selector wordBlock={this.state.recogonizedText} />
         )}
       </>
     );
